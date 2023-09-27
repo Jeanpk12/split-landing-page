@@ -1,0 +1,159 @@
+:root {
+    --left-bg-color: rgba(90, 44, 44, 0.6);
+    --right-bg-color: rgba(43, 43, 43, 0.6);
+    --left-btn-hover-color: rgb(255, 255, 255);
+    --right-btn-hover-color: rgb(255, 255, 255);
+    --hover-width: 75%;
+    --other-width: 25%;
+    --speed: 1000ms;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #333;
+}
+
+.fixed-text {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    margin-top: 0.2rem;
+    text-shadow: -1px 2px 5px rgba(0,0,0,0.45);
+}
+
+
+.split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.split.left {
+    left: 0;
+    background: url(src/image/resident-evil-4-remake-capa-poster.jpg) no-repeat;
+    background-size: cover;
+}
+
+.split.left::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--left-bg-color);
+}
+
+.split.right {
+    right: 0;
+    background: url(src/image/Hogwart.jpg) no-repeat;
+    background-size: cover;
+}
+
+.split.right::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--right-bg-color);
+}
+
+.hover-left .left {
+    width: var(--hover-width);
+  }
+  
+  .hover-left .right {
+    width: var(--other-width);
+  }
+  
+  .hover-right .right {
+    width: var(--hover-width);
+  }
+  
+  .hover-right .left {
+    width: var(--other-width);
+  }
+
+.split.right,
+.split.left,
+.split.right::before,
+.split.left::before {
+    transition: all var(--speed) ease-in-out;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color: #fff;
+    border: 0.2rem solid #fff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 15rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 0.10), 0px 21px 21px 0px rgba(0, 0, 0, 0.09), 0px 48px 29px 0px rgba(0, 0, 0, 0.05), 0px 86px 34px 0px rgba(0, 0, 0, 0.01), 0px 134px 38px 0px rgba(0, 0, 0, 0.00);
+    transition: 0.3s;
+
+
+
+    /* border-radius: 16px; */
+}
+
+
+.split.right .btn:hover, .split.left .btn:hover {
+    background-color: var(--right-btn-hover-color);
+    border-color: var(--right-btn-hover-color);
+    color: #333;
+    box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 0.10), 0px 21px 21px 0px rgba(0, 0, 0, 0.09), 0px 48px 29px 0px rgba(0, 0, 0, 0.05), 0px 86px 34px 0px rgba(0, 0, 0, 0.01), 0px 134px 38px 0px rgba(0, 0, 0, 0.00);
+
+
+}
+
+@media (max-width: 800px) {
+    h1 {
+      font-size: 2rem;
+      top: 30%;
+    }
+  
+    .btn {
+      padding: 1.2rem;
+      width: 12rem;
+    }
+  }
