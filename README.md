@@ -2,6 +2,8 @@
 
 <p>Este é um projeto simples para uma página de votação do melhor jogo do ano de 2023. A página é projetada com um layout split, apresentando dois jogos para votação: <strong>Resident Evil 4 Remake</strong> e <strong>Hogwarts Legacy</strong> . Os usuários podem interagir com a página votando em seu jogo favorito.</p>
 
+![image](https://github.com/Jeanpk12/split-landing-page/assets/122842874/a6a8be54-35e4-4f9f-a609-c319d3337432)
+
 <h2>Estrutura do Projeto</h2>
 <p>O projeto é composto por três arquivos principais:</p>
 
