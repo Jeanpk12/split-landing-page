@@ -4,6 +4,8 @@
 
 ![image](https://github.com/Jeanpk12/split-landing-page/assets/122842874/a6a8be54-35e4-4f9f-a609-c319d3337432)
 
+<a href="https://jeanpk12.github.io/split-landing-page/" target_blank>GitHub Page</a>
+
 <h2>Estrutura do Projeto</h2>
 <p>O projeto é composto por três arquivos principais:</p>
 
